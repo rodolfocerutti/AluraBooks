@@ -47,7 +47,7 @@
 }
 
 .lista-menu__link{
-    background:var(--cor-gradiente);
+    background: var(--cor-gradiente);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -56,4 +56,24 @@
 
 .container__botao{
     display: none;
+}
+
+.container__titulo{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .container__titulo, .container__titulo--negro{
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+
+    .container__titulo{
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito{
+        font-weight: 700;
+    }
 }
