@@ -28,9 +28,36 @@
     font-family: var(--fonte-principal);
     font-size: 14px;
     font-weight: 400;
+    text-align: center;
     color: var(--cor-branca);
-    text-align: right;
     background: url(../assets/lupa.svg);
     background-repeat: no-repeat;
-    background-position: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo {
+        font-size: 36px;
+    }
+
+    .banner__pesquisa{
+        width: 50%;
+    }
+
+    .banner__pesquisa::placeholder{
+        background-position: 5rem;
+    }
+}
+
+@media screen and (min-width: 1728px){
+    .banner__pesquisa{
+        width: 35%
+    }
+
+    .banner__pesquisa::placeholder{
+        background-position: 10rem;
+    }
+
+    .banner {
+        padding: 6rem 0;
+    }
 }

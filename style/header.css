@@ -7,6 +7,14 @@
     display: inline-block;
 }
 
+.container__botao:checked~ .container__rotulo > .cabecalho__menu-hamburguer{
+    background-image: url(../assets/MenuAberto.svg);
+}
+
+.container__botao:checked~ .container__rotulo{
+    background: var(--cor-gradiente);
+}
+
 .cabecalho{
     background-color: var(--cor-branca);
     display: flex;
@@ -62,6 +70,14 @@
     display: none;
 }
 
+.opcoes{
+    display: none;
+}
+
+.container__texto{
+    display: none;
+}
+
 @media screen and (min-width: 1024px){
     .container__titulo, .container__titulo--negro{
         font-family: var(--fonte-secundaria);
@@ -75,5 +91,77 @@
 
     .container__titulo--negrito{
         font-weight: 700;
+    }
+
+    .opcoes{
+        display: flex;
+    }
+
+    .opcoes__item{
+        padding: 0 1rem;
+        text-transform: uppercase;
+    }
+
+    .opcoes__link{
+        text-decoration: none;
+        color: var(--cor-preta);
+        font-family: var(--fonte-principal);
+    }
+
+    .container__imagem-transparente{
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer{
+        display: none;
+    }
+
+    .opcoes__botao:checked~.lista-menu{
+        display: block;
+        width: auto;
+    }
+
+    .opcoes__botao{
+        display: none;
+    }
+
+    .opcoes__botao:checked~.opcoes__rotulo > .opcoes__item{
+        background: var(--cor-gradiente);
+        color: var(--cor-branca);
+    }
+
+    .opcoes__item{
+        padding: 1rem 2rem;
+    }
+
+    .lista-menu__item:hover{
+        background: var(--cor-gradiente);
+    }
+
+    .lista-menu__item:hover > .lista-menu__link{
+        -webkit-text-fill-color: var(--cor-branca);
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1728px){
+
+    .container__texto{
+        display: block;
+    }
+
+    .container__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--cor-preta);
+    }
+
+    .cabecalho{
+        padding: 0 2rem;
+    }
+
+    .opcoes{
+        margin-right: auto;
     }
 }
